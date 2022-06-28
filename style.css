@@ -192,6 +192,7 @@ p {
     box-shadow: 2px 2px 5px;
     background-color: hsl(154, 56%, 50%);
     color: white;
+    position: relative;
 }
 
 .rhs .footer {
@@ -215,30 +216,60 @@ p {
         flex-wrap: wrap;
         align-items: center;
         justify-content: center;
-        padding: 100px 0;
+        padding: 10px;
+    }
+
+    section {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    .learn,
+    .rhs {
+        width: 70%;
+        padding: 1rem;
+        margin: 0 auto;
+    }
+    
+    .learn h2 {
+        font-size: 2.2em;
+        line-height: 50px;
     }
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 800px) {
+
+    .learn,
+    .rhs {
+        width: 90%;
+        padding: 1rem;
+        margin: 0 auto;
+    }
+}
+
+@media screen and (max-width: 600px) {
     body {
-        background-image: url(bg-intro-mobile.png);
+        background-image: url(bg-intro-mobile.png) repeat center center fixed;
         background-size: cover;
         background-position: center;
         background-color: hsl(0, 100%, 74%);
         align-items: center;
+        min-height: 100vh;
     }
 
-    #main {
+    main {
         max-width: 375px;
-        flex-direction: column;
-        display: grid;
+        
     }
 
     .container {
         width: 100%;
-        display: grid;
         padding-left: 20px;
         padding-right: 20px;
+        flex-direction: column;
+        height: auto;
+        flex: grid;
     }
 
     .learn {
@@ -247,6 +278,9 @@ p {
         width: 100%;
         justify-content: center;
         align-content: center;
+        width: 90%;
+        padding: 0.8rem;
+        margin: 0 auto;
     }
 
     h2 {
@@ -277,6 +311,9 @@ p {
         display: flex;
         flex-direction: column;
         padding-bottom: 20px;
+        width: 90%;
+        padding: 0.8rem;
+        margin: 0 auto;
     }
 
     .rhs .try {
@@ -319,7 +356,7 @@ p {
         font-size: 10px;
     }
 
-     .rhs .box input:focus:invalid~.error::after {
+    .rhs .box input:focus:invalid~.error::after {
         content: attr(data-error);
         position: absolute;
         bottom: 0;
@@ -332,7 +369,7 @@ p {
         font-weight: 700;
     }
 
-        .rhs .box input:focus:invalid~.error {
+    .rhs .box input:focus:invalid~.error {
         position: relative;
         margin: 15px;
     }
