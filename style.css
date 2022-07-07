@@ -249,7 +249,7 @@ p {
     }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 375px) {
     body {
         background-image: url(bg-intro-mobile.png) repeat center center fixed;
         background-size: cover;
